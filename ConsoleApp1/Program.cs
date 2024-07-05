@@ -6,10 +6,36 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C# I'm Abdullah!");
-            Console.WriteLine("Hello World.");
-            Console.WriteLine("The Sum of 10 + 20 = " + (10+20));
-            Console.WriteLine("My Name is {0}, ans I'm {1} years old.", "Abdullah Al-Shehri", 23);
+            Console.WriteLine("Useful Escape Characters:\n");
+
+            //Newline
+            Console.WriteLine("Newline:");
+            Console.WriteLine("Welcome to \nProgrammingAdvices\n");
+
+            //Tab
+            Console.WriteLine("Tab:");
+            Console.WriteLine("Welcome to\tProgrammingAdvices\n");
+
+            //Backspace
+            Console.WriteLine("Backspace:");
+            Console.WriteLine("Welcome to \bProgrammingAdvices\n");
+
+            //Single quote
+            Console.WriteLine("Single Quote:");
+            Console.WriteLine("Welcome to \' ProgrammingAdvices\n");
+
+            //Double quote
+            Console.WriteLine("Double Quote:");
+            Console.WriteLine("Welcome to \" ProgrammingAdvices\n");
+
+            //Backslash
+            Console.WriteLine("Backslash:");
+            Console.WriteLine("Welcome to \\ ProgrammingAdvices\n");
+
+            //Alert
+            Console.WriteLine("Alert:");
+            Console.WriteLine("\a");
+
         }
     }
 }
