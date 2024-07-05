@@ -6,13 +6,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // This is Single-line comment.
+            string MyName = "Abdullah";
 
-            /*
-             
-            This is Multi-line comment.
-             
-             */
+            Console.WriteLine(MyName);
+
+            int x = 10, y = 20;
+            Console.WriteLine("x=" + x);
+            Console.WriteLine("y=" + y);
+
+
+            Console.WriteLine("x+y=" + x + y);
+            Console.WriteLine("x+y=" + (x + y));
+
+            double MyDbl = 24.2343D;
+            char MyLtr = 'a';
+            bool MyBool = false;
         }
     }
 }
