@@ -6,47 +6,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //you dont specify any type here , automatically will be specified
-            var student = new { Id = 20, FirstName = "Mohammed", LastName = "Abu-Hadhoud" };
+            dynamic x = 1;
 
-            Console.WriteLine("\nExample1:\n");
-            Console.WriteLine(student.Id); //output: 20
-            Console.WriteLine(student.FirstName); //output: Mohammed
-            Console.WriteLine(student.LastName); //output: Abu-Hadhoud
+            Console.WriteLine(x);
 
-            //You can print like this:
-            Console.WriteLine(student);
+            x = "A";
 
+            Console.WriteLine(x);
 
-            //anonymous types are read-only
-            //you cannot change the values of properties as they are read-only.
+            x = true;
 
-            // student.Id = 2;//Error: cannot chage value
-            // student.FirstName = "Ali";//Error: cannot chage value
+            Console.WriteLine(x);
 
+            Console.WriteLine("\n----\n");
 
-            //An anonymous type's property can include another anonymous type.
-            var student2 = new
-            {
-                Id = 20,
-                FirstName = "Mohammed",
-                LastName = "Abu-Hadhoud",
-                Address = new { Id = 1, City = "Amman", Country = "Jordan" }
-            };
+            dynamic MyDynamicVar = 100;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
-            Console.WriteLine("\nExample2:\n");
-            Console.WriteLine(student2.Id);
-            Console.WriteLine(student2.FirstName);
-            Console.WriteLine(student2.LastName);
+            MyDynamicVar = "Hello World!!";
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
-            Console.WriteLine(student2.Address.Id);
-            Console.WriteLine(student2.Address.City);
-            Console.WriteLine(student2.Address.Country);
-            Console.WriteLine(student2.Address);
+            MyDynamicVar = true;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
-            int x = 0;
-            Console.WriteLine(x.GetType());
-            Console.WriteLine(student2.GetType());
+            MyDynamicVar = DateTime.Now;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
         }
     }
 }
