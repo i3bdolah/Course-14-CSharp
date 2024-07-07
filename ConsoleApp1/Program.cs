@@ -7,11 +7,18 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            DateTime dt1 = new DateTime(2023, 2, 21);
-            DateTime dt2 = new DateTime(2023, 2, 25);
-            TimeSpan result = dt2.Subtract(dt1);
+            DateTime dt1 = new DateTime(2015, 12, 20);
+            DateTime dt2 = new DateTime(2016, 12, 31, 5, 10, 20);
+            TimeSpan time = new TimeSpan(10, 5, 25, 50);
 
-            Console.WriteLine(result.ToString());
+            Console.WriteLine(dt2 + time); // 1/10/2017 10:36:10 AM
+            Console.WriteLine(dt2 - dt1); //377.05:10:20
+            Console.WriteLine(dt1 == dt2); //False
+            Console.WriteLine(dt1 != dt2); //True
+            Console.WriteLine(dt1 > dt2); //False
+            Console.WriteLine(dt1 < dt2); //True
+            Console.WriteLine(dt1 >= dt2); //False
+            Console.WriteLine(dt1 <= dt2);//True
         }
     }
 }
