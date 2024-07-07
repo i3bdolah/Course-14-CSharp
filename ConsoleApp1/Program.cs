@@ -6,31 +6,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            dynamic x = 1;
+            DateTime dateTime = new DateTime();
+            Console.WriteLine(dateTime);
 
-            Console.WriteLine(x);
+            //assigns year, month, day
+            DateTime dt2 = new DateTime(2023, 12, 31);
 
-            x = "A";
+            //assigns year, month, day, hour, min, seconds
+            DateTime dt3 = new DateTime(2023, 12, 31, 5, 10, 20);
 
-            Console.WriteLine(x);
+            //assigns year, month, day, hour, min, seconds, UTC timezone
+            DateTime dt4 = new DateTime(2023, 12, 31, 5, 10, 20, DateTimeKind.Utc);
 
-            x = true;
-
-            Console.WriteLine(x);
-
-            Console.WriteLine("\n----\n");
-
-            dynamic MyDynamicVar = 100;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
-
-            MyDynamicVar = "Hello World!!";
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
-
-            MyDynamicVar = true;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
-
-            MyDynamicVar = DateTime.Now;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
+            Console.WriteLine(dt2);
+            Console.WriteLine(dt3);
+            Console.WriteLine(dt4);
         }
     }
 }
