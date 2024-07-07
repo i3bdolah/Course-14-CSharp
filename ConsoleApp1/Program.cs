@@ -6,17 +6,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            DateTime currentDateTime = DateTime.Now;  //returns current date and time
-            DateTime todaysDate = DateTime.Today; // returns today's date
-            DateTime currentDateTimeUTC = DateTime.UtcNow;// returns current UTC date and time
-            DateTime maxDateTimeValue = DateTime.MaxValue; // returns max value of DateTime
-            DateTime minDateTimeValue = DateTime.MinValue; // returns min value of DateTime
 
-            Console.WriteLine("currentDateTime: " + currentDateTime);
-            Console.WriteLine("Today: " + todaysDate);
-            Console.WriteLine("currentDateTimeUTC: " + currentDateTimeUTC);
-            Console.WriteLine("minDateTimeValue: " + minDateTimeValue);
-            Console.WriteLine("maxDateTimeValue: " + maxDateTimeValue);
+            DateTime dt = new DateTime(2023, 2, 21);
+
+            // Hours, Minutes, Seconds
+            TimeSpan ts = new TimeSpan(49, 25, 34);
+            Console.WriteLine(ts.GetType());
+            Console.WriteLine(ts);
+            Console.WriteLine(ts.Days);
+            Console.WriteLine(ts.Hours);
+            Console.WriteLine(ts.Minutes);
+            Console.WriteLine(ts.Seconds);
+
+            //this will add time span to the date.
+            DateTime newDate = dt.Add(ts);
+
+            Console.WriteLine(newDate);
         }
     }
 }
