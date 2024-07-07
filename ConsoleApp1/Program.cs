@@ -6,19 +6,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            string validDate = "12/20/2015";
+            string unvalidDate = "1q2/20sds/sd2015";
 
-            DateTime dt1 = new DateTime(2015, 12, 20);
-            DateTime dt2 = new DateTime(2016, 12, 31, 5, 10, 20);
-            TimeSpan time = new TimeSpan(10, 5, 25, 50);
+            DateTime dt;
 
-            Console.WriteLine(dt2 + time); // 1/10/2017 10:36:10 AM
-            Console.WriteLine(dt2 - dt1); //377.05:10:20
-            Console.WriteLine(dt1 == dt2); //False
-            Console.WriteLine(dt1 != dt2); //True
-            Console.WriteLine(dt1 > dt2); //False
-            Console.WriteLine(dt1 < dt2); //True
-            Console.WriteLine(dt1 >= dt2); //False
-            Console.WriteLine(dt1 <= dt2);//True
+            if (DateTime.TryParse(validDate, out dt))
+            {
+                Console.WriteLine(dt.ToString());
+            }
+            else
+            {
+                Console.WriteLine($"{validDate} is not a valid date string");
+            }
+
+            if (DateTime.TryParse(unvalidDate, out dt))
+            {
+                Console.WriteLine(dt.ToString());
+            }
+            else
+            {
+                Console.WriteLine($"{unvalidDate} is not a valid date string");
+            }
         }
     }
 }
