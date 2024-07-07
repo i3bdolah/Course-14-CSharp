@@ -6,11 +6,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //assigns default value 01/01/0001 00:00:00
-            DateTime dt1 = new DateTime();
+            //number of 100-nanosecond intervals that have elapsed
+            //since January 1, 0001, at 00:00:00.000 in the Gregorian calendar. 
 
-            dt1 = DateTime.Now;
-            Console.WriteLine(dt1);
+            DateTime dt = DateTime.Now;
+            Console.WriteLine(DateTime.MinValue.Ticks);  //min value of ticks
+            Console.WriteLine(DateTime.MaxValue.Ticks); // max value of ticks
         }
     }
 }
