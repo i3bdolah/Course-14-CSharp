@@ -6,28 +6,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int number = 10, result;
-            bool flag = true;
+            Console.Write("Enter a number : ");
+            string number = Console.ReadLine();
+            string result;
 
-            result = +number;
-            Console.WriteLine("+number = " + result);
-
-            result = -number;
-            Console.WriteLine("-number = " + result);
-
-            result = ++number;
-            Console.WriteLine("++number = " + result);
-
-            result = --number;
-            Console.WriteLine("--number = " + result);
-
-            Console.WriteLine("!flag = " + (!flag));
-
-            Console.WriteLine((number++));
-            Console.WriteLine((number));
-
-            Console.WriteLine((++number));
-            Console.WriteLine((number));
+            result = (Convert.ToInt32(number) % 2 == 0) ? "Even Number" : "Odd Number";
+            Console.WriteLine("{0} is {1}", number, result);
         }
     }
 }
