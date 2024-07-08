@@ -6,9 +6,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int myInt = 100;
+            double myDbl = 100.1; // Manual Casting (Explicit)
+            int myInt = (int) myDbl;
 
-            double myDbl = myInt; // Automatic Casting (Implicit)
 
             Console.WriteLine(myInt);
             Console.WriteLine(myDbl);
