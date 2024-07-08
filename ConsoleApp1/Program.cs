@@ -6,16 +6,12 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //  String Interpolation
+            int myInt = 100;
 
-            string firstName = "Abdullah";
-            string lastName = "Al-Shehri";
-            string code = "107";
+            double myDbl = myInt; // Automatic Casting (Implicit)
 
-            //You shold use $ to $ to identify an interpolated string 
-            string fullName = $"Mr. {firstName} {lastName}, Code: {code}";
-
-            Console.WriteLine(fullName);
+            Console.WriteLine(myInt);
+            Console.WriteLine(myDbl);
         }
     }
 }
