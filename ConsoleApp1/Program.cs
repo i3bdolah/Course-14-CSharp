@@ -6,11 +6,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Type your username and press enter
-            Console.Write("Enter Username : ");
-
-            string Username = Console.ReadLine();
-            Console.WriteLine("Username is: " + Username);
+            Console.Write("Enter your age : ");
+            //if you don't convert you will get error, and if you enter string you will get error
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your age is : " + (age - 1));
         }
     }
 }
