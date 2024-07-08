@@ -6,10 +6,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter your age : ");
-            //if you don't convert you will get error, and if you enter string you will get error
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your age is : " + (age - 1));
+            int number = 10, result;
+            bool flag = true;
+
+            result = +number;
+            Console.WriteLine("+number = " + result);
+
+            result = -number;
+            Console.WriteLine("-number = " + result);
+
+            result = ++number;
+            Console.WriteLine("++number = " + result);
+
+            result = --number;
+            Console.WriteLine("--number = " + result);
+
+            Console.WriteLine("!flag = " + (!flag));
+
+            Console.WriteLine((number++));
+            Console.WriteLine((number));
+
+            Console.WriteLine((++number));
+            Console.WriteLine((number));
         }
     }
 }
