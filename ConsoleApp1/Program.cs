@@ -4,25 +4,13 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        enum WeekDays
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
-
         static void Main(string[] args)
         {
-            Console.WriteLine(WeekDays.Friday); //output: Friday 
-            int day = (int)WeekDays.Friday; // enum to int conversion
-            Console.WriteLine(day); //output: 4 
+            // Type your username and press enter
+            Console.Write("Enter Username : ");
 
-            var wd = (WeekDays)5; // int to enum conversion
-            Console.WriteLine(wd);//output: Saturday 
+            string Username = Console.ReadLine();
+            Console.WriteLine("Username is: " + Username);
         }
     }
 }
