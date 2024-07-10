@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConsoleApp1
 {
@@ -6,12 +7,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number : ");
-            string number = Console.ReadLine();
-            string result;
+            // Note that we used System.Linq above.
+            int[] numbers = { 51, -1, 2, 14, 18, 40, 178 };
 
-            result = (Convert.ToInt32(number) % 2 == 0) ? "Even Number" : "Odd Number";
-            Console.WriteLine("{0} is {1}", number, result);
+            // get the minimum element
+            Console.WriteLine("Smallest  Element: " + numbers.Min());
+
+            // Max() returns the largest number in array
+            Console.WriteLine("Largest Element: " + numbers.Max());
         }
     }
 }
