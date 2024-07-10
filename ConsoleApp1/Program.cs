@@ -7,19 +7,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            // Note that we used System.Linq above.
-            int[] numbers = { 20, 22, 19, 18, 1 };
-
-
-
-            // compute Count
-            Console.WriteLine("Count : " + numbers.Count());
-
-            // compute Sum
-            Console.WriteLine("Sum : " + numbers.Sum());
-
-            // compute the average
-            Console.WriteLine("Average: " + numbers.Average());
+            Console.WriteLine("Max of 5, 10 is: {0}", Math.Max(5, 10));
+            Console.WriteLine("Min of 5, 10 is: {0}", Math.Min(5, 10));
+            Console.WriteLine("Squir Root of 64 is: {0}", Math.Sqrt(64));
+            Console.WriteLine("Absolute (positive) value of  -4.7 is: {0}", Math.Abs(-4.7));
+            Console.WriteLine("Round of 9.99 is: {0}", Math.Round(9.99));
         }
     }
 }
