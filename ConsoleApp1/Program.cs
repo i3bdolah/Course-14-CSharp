@@ -7,14 +7,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            try
+            Random rnd = new Random();
+
+            for (int i = 0; i < 10; i++)
             {
-                int[] Arr = { 1, 2, 3, 4, 5 };
-                Console.WriteLine(Arr[10]);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(rnd.Next());
+                Console.WriteLine(rnd.Next(5));
+                Console.WriteLine(rnd.Next(5,10));
+                Console.WriteLine("--------------");
             }
         }
     }
