@@ -5,19 +5,15 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        static string GetMyName()
+        static void MyMethod(string child1, string child2, string child3)
         {
-            return "Abdullah Al-Shehri";
-        }
-
-        static void MyFirstMethod(string name, byte age = 23)
-        {
-            Console.WriteLine($"{name} writes his first method at the age of {age}.");
+            Console.WriteLine("The youngest child is: " + child3);
         }
 
         static void Main(string[] args)
         {
-            MyFirstMethod(GetMyName());
+            //see the order of sending parameters is not important.
+            MyMethod(child3: "Omar", child1: "Saqer", child2: "Hamza");
         }
     }
 }
