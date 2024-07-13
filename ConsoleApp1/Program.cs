@@ -5,6 +5,10 @@ namespace ConsoleApp1
 {
     internal class Program
     {
+        static string GetMyName()
+        {
+            return "Abdullah Al-Shehri";
+        }
 
         static void MyFirstMethod(string name, byte age = 23)
         {
@@ -13,7 +17,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            MyFirstMethod("Abdullah");
+            MyFirstMethod(GetMyName());
         }
     }
 }
